@@ -27,6 +27,10 @@ router.get('/login', function(req, res) {
     res.render('business/login.hjs');
 });
 
+router.get('/setting', function (req, res) {
+    res.render('business/setting', {title: 'Express'});
+});
+
 router.post('/login', passport.authenticate('local-login', {
     successRedirect : '/config',
     failureRedirect : '/login'
